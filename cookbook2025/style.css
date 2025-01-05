@@ -1,0 +1,209 @@
+/*!
+Theme Name: cookbook2025
+Theme URI: https://www.cookbookcommunity.com
+Template: kadence
+Author: Cookbook Community
+Author URI: https://www.cookbookcommunity.com
+Description: Cookbookcommunity Custom Theme
+Version: 1.0.0
+License: GNU General Public License v3.0 (or later)
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
+Text Domain: cookbook2025
+*/
+
+
+/* A11y Fixes */
+
+/* Allow for esc key to close Kadence submenu */
+.nav--toggle-sub li:hover > ul,
+.nav--toggle-sub li.menu-item--toggled-on > ul,
+.nav--toggle-sub li:not(.menu-item--has-toggle):focus > ul {
+ display: none;
+}
+
+.main-navigation .menu-item .sub-menu {
+  display: none;
+}
+.main-navigation .menu-item .sub-menu.submenu-open,
+.main-navigation .menu-item .sub-menu.toggle-show {
+  display: block;
+}
+
+/* Styling for floating label for gravity forms. 
+ * Add class of floating-label to desired form fields */
+.floating-label {
+	 position: relative;
+}
+.floating-label label {
+	 cursor: text;
+	 font-size: 1rem;
+	 left: 1rem;
+	 margin: 0;
+	 opacity: 0;
+	 padding-right: 3.5em;
+	 position: absolute;
+	 top: 0.75rem;
+	 font-weight: 500;
+	 transition: all ease 0.4s;
+}
+.floating-label:focus-within label {
+	 position: absolute;
+    left: 12px;
+    padding: 0 5px !important;
+    background: #fff;
+    font-size: 13px!important;
+    top: -15px;
+    left: 1px;
+    line-height: 19px;
+    color: #383b41;
+    opacity: 1;
+}
+.floating-label input:focus ~ label, 
+.floating-label textarea:focus ~ label,
+.floating-label input.valid ~ label,
+.floating-label textarea.valid ~ label, 
+.floating-label input:visited ~ label,
+.floating-label textarea:visited ~ label,
+.floating-label input:-webkit-autofill ~ label,
+.floating-label textarea:-webkit-autofill ~ label {
+	 position: absolute;
+    left: 12px;
+    padding: 0 5px !important;
+    background: #fff;
+    font-size: 13px!important;
+    top: -15px;
+    left: 1px;
+    line-height: 19px;
+    color: #383b41;
+    opacity: 1;
+
+}
+ .floating-label.input-active label {
+	position: absolute;
+    left: 12px;
+    padding: 0 5px !important;
+    background: #fff;
+    font-size: 13px!important;
+    top: -15px;
+    left: 1px;
+    line-height: 19px;
+    color: #383b41;
+    opacity: 1;
+}
+
+/* Basic A11Y fixes for Kadence Blocks */
+body .kt-blocks-modal-link:not(.kb-btn-global-inherit):focus-within {
+	outline:inherit;
+}
+
+/* Search Bar */
+.woocommerce-product-search {
+	position:relative;
+}
+.woocommerce-product-search .screen-reader-text {
+	cursor: text;
+	 font-size: 1rem;
+	 left: 1rem;
+	 margin: 0;
+	 opacity: 0;
+	 padding-right: 3.5em;
+	 position: absolute;
+	 top: 0.75rem;
+	 font-weight: 500;
+	 transition: all ease 0.4s;
+}
+.woocommerce-product-search:focus-within .screen-reader-text {
+	clip:unset;
+	clip-path:unset;
+	height:auto;
+	width:auto;
+	left: 12px;
+    padding: 0 5px !important;
+    background: #fff;
+    font-size: 13px!important;
+    top: -13px;
+    left: 1px;
+    line-height: 19px;
+    color: #383b41;
+    opacity: 1;
+}
+.woocommerce-product-search input[type='search']::placeholder,
+.search-form input[type='search']::placeholder {
+	opacity:1;
+}
+
+/* menu */
+body:not(.hide-focus-outline) .header-navigation li.menu-item--has-toggle>a:focus .dropdown-nav-toggle {
+	opacity:1 !important;
+}
+
+/* Cookies */
+.cky-preference-header .cky-btn-close img {
+	filter:brightness(0);
+}
+
+/* Kadence Slider */
+.kb-splide .splide__pagination__page:focus-visible {
+	outline:2px solid #000;
+}
+
+/* Smart Slider */
+body .n2-ss-slider :focus,
+.n2-ss-slider a.n2-ow:focus, .n2-ss-slider .n2-ow-all a:focus {
+	outline:2px solid #fff !important;
+}
+
+/* Forms */
+body select {
+	background-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' class='kadence-svg-icon kadence-arrow-down-svg' fill='currentColor' version='1.1' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M5.293 9.707l6 6c0.391 0.391 1.024 0.391 1.414 0l6-6c0.391-0.391 0.391-1.024 0-1.414s-1.024-0.391-1.414 0l-5.293 5.293-5.293-5.293c-0.391-0.391-1.024-0.391-1.414 0s-0.391 1.024 0 1.414z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], input[type="number"], input[type="tel"], input[type="range"], input[type="date"], input[type="month"], input[type="week"], input[type="time"], input[type="datetime"], input[type="datetime-local"], input[type="color"], textarea, body select, body .select2-container--default .select2-selection--single {
+	border-color:#4E5C74;
+}
+
+/* Events Calendar */
+.tribe-events .datepicker .day.focused, .tribe-events .datepicker .day:focus, .tribe-events .datepicker .day:hover, .tribe-events .datepicker .month.focused, .tribe-events .datepicker .month:focus, .tribe-events .datepicker .month:hover, .tribe-events .datepicker .year.focused, .tribe-events .datepicker .year:focus, .tribe-events .datepicker .year:hover {
+	outline:2px solid #000;
+}
+.tribe-events-c-search__input-group {
+	position:relative;
+}
+.tribe-events-c-search__input-group label {
+	opacity:0;
+	transition: all ease 0.4s;
+}
+.tribe-events-c-search__input-group:focus-within label {
+	clip:unset;
+	height:auto;
+	width:auto;
+	opacity:1;
+	margin:0;
+	top:-40px;
+}
+.tribe-events .datepicker .next .tribe-events-c-top-bar__datepicker-nav-icon-svg path, .tribe-events .datepicker .prev .tribe-events-c-top-bar__datepicker-nav-icon-svg path, #primary .tribe-events .tribe-common-c-btn-icon--caret-left .tribe-common-c-btn-icon__icon-svg path, #primary .tribe-events .tribe-common-c-btn-icon--caret-right .tribe-common-c-btn-icon__icon-svg path,
+.tribe-events .tribe-events-c-nav__next:disabled .tribe-events-c-nav__next-icon-svg path, .tribe-events button.tribe-events-c-nav__next:disabled .tribe-events-c-nav__next-icon-svg path {
+	fill:#707070;
+}
+
+/* WooCommerce */
+select.orderby:focus-visible {
+	outline:2px solid #000;
+}
+.kadence-shop-top-row {
+	position:relative;
+}
+.kadence-shop-top-row .skip-link {
+	right:0;
+	left:auto;
+}
+span.required {
+	color:red;
+}
+.form-description {
+	font-size:1rem;
+}
+
+
+/* End A11y Fixes */
+
